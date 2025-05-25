@@ -582,7 +582,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Furever Yours. All rights reserved.</p>
+                <p>&copy; 2025 Furever Yours. All rights reserved. | Designed & Developed by <a href="https://webart4u.com/" target="_blank" style="color: #FF8C00;">Webart4U</a></p>
             </div>
         </div>
     </footer>

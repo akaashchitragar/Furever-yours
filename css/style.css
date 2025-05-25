@@ -51,6 +51,7 @@ body {
     line-height: 1.6;
     color: var(--text-dark);
     background-color: #ffffff;
+    overflow-x: hidden; /* Prevent horizontal scroll on mobile */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -3506,4 +3507,488 @@ footer {
 .nav-cta .btn-sm i {
     margin-right: 5px;
     font-size: 0.85rem;
+}
+
+/* Enhanced Responsive Styles */
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 95%;
+    }
+    
+    .section-header h2 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-title {
+        font-size: 3.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.8rem;
+    }
+    
+    .product-showcase {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    
+    .bento-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 992px) {
+    section {
+        padding: 80px 0;
+    }
+    
+    .container {
+        width: 95%;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+        line-height: 1.2;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+    
+    .floating-paw {
+        display: none;
+    }
+    
+    .hero-image-container {
+        width: 100%;
+    }
+    
+    .product-showcase {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .product-benefits {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .benefit-image, .benefits-content {
+        width: 100%;
+    }
+    
+    .benefit-image {
+        margin-bottom: 30px;
+    }
+    
+    .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .steps {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .step {
+        width: 80%;
+        margin-bottom: 40px;
+    }
+    
+    .step-connector {
+        display: none;
+    }
+    
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .about-image, .about-text {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .about-image {
+        margin-bottom: 40px;
+    }
+    
+    .testimonial {
+        flex-direction: column;
+        padding: 30px;
+    }
+    
+    .testimonial-image {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 20px;
+    }
+    
+    .testimonial-content {
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+    }
+    
+    .nav-links ul {
+        gap: 15px;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 768px) {
+    section {
+        padding: 60px 0;
+    }
+    
+    .section-header {
+        margin-bottom: 40px;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .hero {
+        padding-top: 120px;
+        text-align: center;
+    }
+    
+    .hero .container {
+        padding-top: 0;
+    }
+    
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .hero-content {
+        order: 1;
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+    
+    .hero-image-container {
+        order: 0;
+        margin: 0 auto;
+        max-width: 300px;
+    }
+    
+    .hero-badge-wrapper {
+        justify-content: center;
+    }
+    
+    .hero-description {
+        max-width: 100%;
+    }
+    
+    .hero-features {
+        justify-content: center;
+    }
+    
+    .cta-buttons {
+        justify-content: center;
+    }
+    
+    .hero-testimonial {
+        margin: 40px auto 0;
+    }
+    
+    .nav-links {
+        position: fixed;
+        left: -100%;
+        top: 76px;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        height: calc(100vh - 76px);
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        z-index: 99;
+        padding: 20px 0;
+    }
+    
+    .nav-links.active {
+        left: 0;
+    }
+    
+    .nav-links ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+    
+    .nav-links ul li {
+        margin: 0;
+    }
+    
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    .about-stats {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+    
+    .stat {
+        width: 45%;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .newsletter-form input {
+        width: 100%;
+        margin-right: 0;
+    }
+    
+    .newsletter-form button {
+        width: 100%;
+    }
+    
+    .product-showcase {
+        grid-template-columns: 1fr;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    
+    .product-benefits {
+        padding: 30px 20px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .footer-logo, .footer-links {
+        width: 100%;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .footer-column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .cookie-banner {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .cookie-banner p {
+        margin-bottom: 15px;
+    }
+    
+    .cookie-buttons {
+        justify-content: flex-start;
+    }
+}
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 576px) {
+    .container {
+        width: 95%;
+        padding: 0 10px;
+    }
+    
+    .section-header h2 {
+        font-size: 1.75rem;
+    }
+    
+    .section-header p {
+        font-size: 1rem;
+    }
+    
+    .hero-title {
+        font-size: 2.25rem;
+        line-height: 1.2;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.25rem;
+        margin-bottom: 15px;
+    }
+    
+    .hero-description {
+        font-size: 0.95rem;
+    }
+    
+    .hero-features {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+    }
+    
+    .btn {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .product-benefits {
+        padding: 25px 15px;
+    }
+    
+    .benefits-list li {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .benefit-icon {
+        margin: 0 auto;
+    }
+    
+    .benefit-text {
+        padding-left: 0;
+    }
+    
+    .bento-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .bento-tile-large, 
+    .bento-tile-medium, 
+    .bento-tile-small {
+        grid-column: span 1;
+    }
+    
+    .founder-tile {
+        aspect-ratio: 16/12;
+    }
+    
+    .testimonials-carousel {
+        padding: 0;
+    }
+    
+    .about-stats {
+        gap: 20px;
+    }
+    
+    .stat {
+        width: 100%;
+    }
+    
+    .step {
+        width: 100%;
+    }
+    
+    .faq-item {
+        padding: 15px;
+    }
+    
+    .faq-question h3 {
+        font-size: 1rem;
+    }
+    
+    .footer-logo img {
+        height: 40px;
+        margin: 0 auto;
+    }
+    
+    .footer-logo {
+        text-align: center;
+    }
+    
+    .footer-column {
+        text-align: center;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+    
+    .footer-bottom p {
+        text-align: center;
+    }
+}
+
+/* Tiny devices (small phones, less than 400px) */
+@media (max-width: 400px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .step {
+        padding: 20px 15px;
+    }
+    
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    .step-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .step h3 {
+        font-size: 1.1rem;
+    }
+    
+    .product-item {
+        padding: 15px;
+    }
+    
+    .product-title {
+        font-size: 1.1rem;
+    }
+    
+    .product-price {
+        font-size: 1.1rem;
+    }
+    
+    .newsletter h2 {
+        font-size: 1.5rem;
+    }
+    
+    .footer-column h3 {
+        font-size: 1.1rem;
+    }
 }

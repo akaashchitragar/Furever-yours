@@ -4,11 +4,18 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mobile Menu Toggle
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
+    const body = document.querySelector('body');
 
     if (hamburger) {
         hamburger.addEventListener('click', function() {
             hamburger.classList.toggle('active');
             navLinks.classList.toggle('active');
+            // Prevent body scrolling when menu is open
+            if (navLinks.classList.contains('active')) {
+                body.style.overflow = 'hidden';
+            } else {
+                body.style.overflow = '';
+            }
         });
     }
 
@@ -16,11 +23,23 @@ document.addEventListener('DOMContentLoaded', function() {
     const navItems = document.querySelectorAll('.nav-links a');
     navItems.forEach(item => {
         item.addEventListener('click', function() {
-            if (hamburger.classList.contains('active')) {
+            if (hamburger && hamburger.classList.contains('active')) {
                 hamburger.classList.remove('active');
                 navLinks.classList.remove('active');
+                body.style.overflow = '';
             }
         });
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+        if (navLinks && navLinks.classList.contains('active') && 
+            !navLinks.contains(event.target) && 
+            !hamburger.contains(event.target)) {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+            body.style.overflow = '';
+        }
     });
 
     // Smooth scrolling for navigation links
@@ -33,57 +52,82 @@ document.addEventListener('DOMContentLoaded', function() {
             
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
+                // Adjust offset based on screen size
+                let offset = 80;
+                if (window.innerWidth <= 768) {
+                    offset = 70;
+                }
+                if (window.innerWidth <= 576) {
+                    offset = 60;
+                }
+                
                 window.scrollTo({
-                    top: targetElement.offsetTop - 80, // Adjust for fixed header
+                    top: targetElement.offsetTop - offset,
                     behavior: 'smooth'
                 });
             }
         });
     });
 
-    // Scroll animations
+    // Scroll animations with better performance
     const fadeElements = document.querySelectorAll('.fade-in');
     const slideElements = document.querySelectorAll('.slide-in');
     
-    // Function to check if element is in viewport
+    // Function to check if element is in viewport with better performance
     function isInViewport(element) {
         const rect = element.getBoundingClientRect();
+        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
         return (
-            rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.8 &&
+            rect.top <= windowHeight * 0.85 &&
             rect.bottom >= 0
         );
     }
     
-    // Function to handle scroll animations
+    // Function to handle scroll animations with debounce for performance
+    let scrollTimeout;
     function handleScrollAnimations() {
-        // Fade in animations
-        fadeElements.forEach(element => {
-            if (isInViewport(element) && !element.classList.contains('active')) {
-                element.classList.add('active');
-            }
-        });
+        if (scrollTimeout) {
+            window.cancelAnimationFrame(scrollTimeout);
+        }
         
-        // Slide in animations
-        slideElements.forEach(element => {
-            if (isInViewport(element) && !element.classList.contains('active')) {
-                element.classList.add('active');
-            }
+        scrollTimeout = window.requestAnimationFrame(() => {
+            // Fade in animations
+            fadeElements.forEach(element => {
+                if (isInViewport(element) && !element.classList.contains('active')) {
+                    element.classList.add('active');
+                }
+            });
+            
+            // Slide in animations
+            slideElements.forEach(element => {
+                if (isInViewport(element) && !element.classList.contains('active')) {
+                    element.classList.add('active');
+                }
+            });
         });
     }
     
     // Initialize scroll animations
     if (fadeElements.length > 0 || slideElements.length > 0) {
         window.addEventListener('scroll', handleScrollAnimations);
+        // Also check on resize for responsive layouts
+        window.addEventListener('resize', handleScrollAnimations);
         handleScrollAnimations(); // Check on page load
     }
 
-    // FAQ Accordion
+    // FAQ Accordion - Make accessible
     const faqQuestions = document.querySelectorAll('.faq-question');
     const faqItems = document.querySelectorAll('.faq-item');
     
     if (faqQuestions.length > 0) {
         faqQuestions.forEach(question => {
-            question.addEventListener('click', () => {
+            // Add ARIA attributes for accessibility
+            question.setAttribute('role', 'button');
+            question.setAttribute('aria-expanded', 'false');
+            question.setAttribute('tabindex', '0');
+            
+            // Handle both click and keyboard events
+            const handleFaqToggle = () => {
                 const answer = question.nextElementSibling;
                 const parent = question.closest('.faq-item');
                 const answerContent = answer.querySelector('.faq-answer-content');
@@ -103,6 +147,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     item.classList.remove('active');
                     itemQuestion.classList.remove('active');
+                    itemQuestion.setAttribute('aria-expanded', 'false');
                     itemAnswer.style.maxHeight = null;
                     itemIcon.classList.remove('fa-minus');
                     itemIcon.classList.add('fa-plus');
@@ -113,6 +158,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     // Close this FAQ
                     parent.classList.remove('active');
                     question.classList.remove('active');
+                    question.setAttribute('aria-expanded', 'false');
                     answer.style.maxHeight = null;
                     icon.classList.remove('fa-minus');
                     icon.classList.add('fa-plus');
@@ -120,32 +166,49 @@ document.addEventListener('DOMContentLoaded', function() {
                     // Open this FAQ
                     parent.classList.add('active');
                     question.classList.add('active');
+                    question.setAttribute('aria-expanded', 'true');
                     answer.style.maxHeight = answerContent.offsetHeight + 'px';
                     icon.classList.remove('fa-plus');
                     icon.classList.add('fa-minus');
+                }
+            };
+            
+            question.addEventListener('click', handleFaqToggle);
+            
+            // Keyboard accessibility
+            question.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    handleFaqToggle();
                 }
             });
         });
     }
 
-    // Scroll Reveal Animation
+    // Scroll Reveal Animation with better performance
+    let revealTimeout;
     function revealOnScroll() {
-        const reveals = document.querySelectorAll('.reveal');
+        if (revealTimeout) {
+            window.cancelAnimationFrame(revealTimeout);
+        }
         
-        reveals.forEach(item => {
+        revealTimeout = window.requestAnimationFrame(() => {
+            const reveals = document.querySelectorAll('.reveal');
             const windowHeight = window.innerHeight;
-            const elementTop = item.getBoundingClientRect().top;
-            const elementVisible = 150;
             
-            if (elementTop < windowHeight - elementVisible) {
-                item.classList.add('active');
-            } else {
-                item.classList.remove('active');
-            }
+            reveals.forEach(item => {
+                const elementTop = item.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    item.classList.add('active');
+                }
+            });
         });
     }
     
     window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('resize', revealOnScroll);
     revealOnScroll(); // Run once on load
 
     // Header scroll effect
@@ -153,7 +216,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (header) {
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
+            if (window.scrollY > 50) {
                 header.classList.add('scrolled');
             } else {
                 header.classList.remove('scrolled');
@@ -166,7 +229,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (backToTopButton) {
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 500) {
+            if (window.scrollY > 300) {
                 backToTopButton.classList.add('visible');
             } else {
                 backToTopButton.classList.remove('visible');
@@ -207,14 +270,17 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (productItems.length) {
         productItems.forEach(item => {
-            // Improved hover transition
-            item.addEventListener('mouseenter', function() {
-                this.style.transition = 'transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease';
-            });
-            
-            item.addEventListener('mouseleave', function() {
-                this.style.transition = 'transform 0.5s cubic-bezier(0.215, 0.610, 0.355, 1.000), box-shadow 0.5s ease';
-            });
+            // Skip hover effects on mobile (better performance)
+            if (window.innerWidth > 768) {
+                // Improved hover transition
+                item.addEventListener('mouseenter', function() {
+                    this.style.transition = 'transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.transition = 'transform 0.5s cubic-bezier(0.215, 0.610, 0.355, 1.000), box-shadow 0.5s ease';
+                });
+            }
             
             // Make entire product card clickable
             item.addEventListener('click', function(e) {
@@ -229,4 +295,52 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+    
+    // Fix image aspect ratios for responsive layouts
+    function maintainImageAspectRatios() {
+        const productImages = document.querySelectorAll('.product-image');
+        
+        productImages.forEach(img => {
+            if (img.complete) {
+                handleImageLoad(img);
+            } else {
+                img.addEventListener('load', () => handleImageLoad(img));
+            }
+        });
+    }
+    
+    function handleImageLoad(img) {
+        const container = img.closest('.product-image-wrapper');
+        if (container) {
+            // Only set aspect ratio if not already done by CSS
+            if (!container.style.aspectRatio) {
+                const aspectRatio = img.naturalWidth / img.naturalHeight;
+                container.style.aspectRatio = aspectRatio;
+            }
+        }
+    }
+    
+    // Run on load and resize
+    maintainImageAspectRatios();
+    window.addEventListener('resize', maintainImageAspectRatios);
+    
+    // Handle responsive videos
+    const resizeVideos = () => {
+        const videos = document.querySelectorAll('iframe[src*="youtube"], iframe[src*="vimeo"]');
+        videos.forEach(video => {
+            const container = video.parentElement;
+            if (container) {
+                container.style.paddingBottom = '56.25%'; // 16:9 aspect ratio
+                container.style.position = 'relative';
+                video.style.position = 'absolute';
+                video.style.top = '0';
+                video.style.left = '0';
+                video.style.width = '100%';
+                video.style.height = '100%';
+            }
+        });
+    };
+    
+    resizeVideos();
+    window.addEventListener('resize', resizeVideos);
 }); 

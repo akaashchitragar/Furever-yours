@@ -850,8 +850,10 @@ header.scrolled {
 
 .product-image-wrapper {
     position: relative;
-    height: 300px;
+    width: 100%;
+    aspect-ratio: 4/3;
     overflow: hidden;
+    border-radius: 12px;
 }
 
 .product-image {
@@ -3773,6 +3775,10 @@ footer {
         margin: 0 auto;
     }
     
+    .product-image-wrapper {
+        aspect-ratio: 3/2;
+    }
+    
     .product-benefits {
         padding: 30px 20px;
     }
@@ -3862,6 +3868,10 @@ footer {
     
     .product-benefits {
         padding: 25px 15px;
+    }
+    
+    .product-image-wrapper {
+        aspect-ratio: 1/1;
     }
     
     .benefits-list li {

@@ -343,4 +343,133 @@ document.addEventListener('DOMContentLoaded', function() {
     
     resizeVideos();
     window.addEventListener('resize', resizeVideos);
-}); 
+    
+    // Comparison Slider Functionality
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    const sliderTrack = document.getElementById('sliderTrack');
+    
+    if (slides.length > 0 && sliderTrack) {
+        // Initialize slider
+        function showSlide(index) {
+            // Remove active class from all slides and dots
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            // Add active class to current slide and dot
+            if (slides[index]) {
+                slides[index].classList.add('active');
+            }
+            if (dots[index]) {
+                dots[index].classList.add('active');
+            }
+            
+            // Move slider track
+            const translateX = -index * 100;
+            sliderTrack.style.transform = `translateX(${translateX}%)`;
+            
+            currentSlide = index;
+        }
+        
+        // Auto-play slider
+        function autoSlide() {
+            const nextSlide = (currentSlide + 1) % slides.length;
+            showSlide(nextSlide);
+        }
+        
+        // Start auto-play
+        let autoPlayInterval = setInterval(autoSlide, 5000);
+        
+        // Pause auto-play on hover
+        const sliderContainer = document.querySelector('.slider-container');
+        if (sliderContainer) {
+            sliderContainer.addEventListener('mouseenter', () => {
+                clearInterval(autoPlayInterval);
+            });
+            
+            sliderContainer.addEventListener('mouseleave', () => {
+                autoPlayInterval = setInterval(autoSlide, 5000);
+            });
+        }
+        
+        // Touch/swipe support for mobile
+        let startX = 0;
+        let endX = 0;
+        
+        if (sliderContainer) {
+            sliderContainer.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+            });
+            
+            sliderContainer.addEventListener('touchend', (e) => {
+                endX = e.changedTouches[0].clientX;
+                handleSwipe();
+            });
+        }
+        
+        function handleSwipe() {
+            const threshold = 50;
+            const diff = startX - endX;
+            
+            if (Math.abs(diff) > threshold) {
+                if (diff > 0) {
+                    // Swipe left - next slide
+                    const nextSlide = (currentSlide + 1) % slides.length;
+                    showSlide(nextSlide);
+                } else {
+                    // Swipe right - previous slide
+                    const prevSlide = (currentSlide - 1 + slides.length) % slides.length;
+                    showSlide(prevSlide);
+                }
+            }
+        }
+    }
+});
+
+// Global functions for slider controls (called from HTML)
+function changeSlide(direction) {
+    const slides = document.querySelectorAll('.slide');
+    if (slides.length === 0) return;
+    
+    let newSlide;
+    if (direction === 1) {
+        // Next slide
+        newSlide = (window.currentSlide + 1) % slides.length;
+    } else {
+        // Previous slide
+        newSlide = (window.currentSlide - 1 + slides.length) % slides.length;
+    }
+    
+    showSlideGlobal(newSlide);
+}
+
+function currentSlide(index) {
+    showSlideGlobal(index - 1); // Convert to 0-based index
+}
+
+function showSlideGlobal(index) {
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    const sliderTrack = document.getElementById('sliderTrack');
+    
+    if (!slides.length || !sliderTrack) return;
+    
+    // Remove active class from all slides and dots
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    
+    // Add active class to current slide and dot
+    if (slides[index]) {
+        slides[index].classList.add('active');
+    }
+    if (dots[index]) {
+        dots[index].classList.add('active');
+    }
+    
+    // Move slider track
+    const translateX = -index * 100;
+    sliderTrack.style.transform = `translateX(${translateX}%)`;
+    
+    window.currentSlide = index;
+}

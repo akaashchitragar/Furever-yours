@@ -104,22 +104,15 @@
             <div class="container">
                 <div class="logo">
                     <a href="index.php">
-                        <img src="images/logo.png" alt="Furever Yours Logo">
+                        <img src="images/logo-heart.png" alt="Furever Yours Heart Logo" style="margin-right: 15px;">
+                        <img src="images/logo-white.png" alt="Furever Yours Logo">
                     </a>
                 </div>
                 <div class="nav-links">
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#products">Products</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#how-it-works">How It Works</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
-                <div class="nav-cta">
-                    <a href="#products" class="btn btn-primary btn-sm">Shop Now</a>
-                </div>
+
                 <div class="hamburger">
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -141,7 +134,7 @@
                 <div class="hero-content fade-in">
                     <span class="section-tag"><i class="fas fa-heart"></i>Welcome!</span>
                     <h1 class="hero-title">Happy Pets, <span class="highlight">Happy Parents</span></h1>
-                    <h2 class="hero-subtitle">Handcrafted Snuffle Mats For Your Furry Friends</h2>
+                    <h2 class="hero-subtitle">High-Quality Snuffle Mats For Your Furry Friends</h2>
                     <p class="hero-description">Give your pet the mental stimulation they deserve with our premium snuffle mats. Made with love to reduce boredom and anxiety while strengthening your bond.</p>
                     
                     <div class="hero-features">
@@ -153,38 +146,19 @@
                         </div>
                         <div class="hero-feature">
                             <div class="feature-icon-wrapper">
-                                <i class="fas fa-truck"></i>
+                                <i class="fas fa-brain"></i>
                             </div>
-                            <span>Free Shipping</span>
+                            <span>Multi-Sensory</span>
                         </div>
                         <div class="hero-feature">
                             <div class="feature-icon-wrapper">
-                                <i class="fas fa-undo"></i>
+                                <i class="fas fa-hammer"></i>
                             </div>
-                            <span>30-Day Returns</span>
+                            <span>Durable</span>
                         </div>
                     </div>
                     
-                    <div class="cta-buttons">
-                        <a href="#products" class="btn btn-primary btn-glow">
-                            <i class="fas fa-paw"></i> Shop Collection
-                        </a>
-                        <a href="#about" class="btn btn-secondary">
-                            Our Story
-                        </a>
-                    </div>
-                    
-                    <div class="hero-testimonial">
-                        <div class="testimonial-stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p>"My dog absolutely loves her snuffle mat! It's become her favorite activity."</p>
-                        <div class="testimonial-author">- Happy Pet Parent</div>
-                    </div>
+
                 </div>
                 
                 <div class="hero-image-container fade-in delay-2">
@@ -199,7 +173,7 @@
         </div>
         
         <div class="hero-scroll">
-            <a href="#products">
+            <a href="#contact">
                 <div class="mouse">
                     <div class="mouse-wheel"></div>
                 </div>
@@ -208,334 +182,222 @@
         </div>
     </section>
 
-    <!-- Product Section -->
-    <section id="products" class="products">
-        <div class="products-bg"></div>
-        <div class="container">
-            <div class="section-header reveal">
-                <span class="section-tag"><i class="fas fa-shopping-bag"></i>Explore Our Collection</span>
-                <h2>Crafted for Curious Minds</h2>
-                <p>Premium enrichment tools designed to spark joy and mental stimulation</p>
-            </div>
-            
-            <!-- Product Showcase -->
-            <div class="product-showcase reveal">
-                <!-- Product 1 -->
-                <div class="product-item">
-                    <div class="product-image-wrapper">
-                        <div class="product-floating-tag">Bestseller</div>
-                        <img src="images/snuffle-mat-1.png" alt="Classic Snuffle Mat" class="product-image">
-                        <div class="product-overlay">
-                            <div class="product-quick-actions">
-                                <a href="#" class="quick-action-btn"><i class="fas fa-eye"></i></a>
-                                <a href="#" class="quick-action-btn"><i class="fas fa-shopping-bag"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-content">
-                        <div class="product-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            <span>(42)</span>
-                        </div>
-                        <h3 class="product-title">Classic Snuffle Mat</h3>
-                        <p class="product-description">Perfect for beginners - multiple layers for optimal foraging</p>
-                        <div class="product-meta">
-                            <span class="product-price">$29.99</span>
-                            <span class="product-size">Medium</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Product 2 -->
-                <div class="product-item featured-product">
-                    <div class="product-image-wrapper">
-                        <div class="product-floating-tag new-tag">New</div>
-                        <img src="images/advanced-mat.png" alt="Advanced Snuffle Mat" class="product-image">
-                        <div class="product-overlay">
-                            <div class="product-quick-actions">
-                                <a href="#" class="quick-action-btn"><i class="fas fa-eye"></i></a>
-                                <a href="#" class="quick-action-btn"><i class="fas fa-shopping-bag"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-content">
-                        <div class="product-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <span>(28)</span>
-                        </div>
-                        <h3 class="product-title">Advanced Snuffle Mat</h3>
-                        <p class="product-description">Multiple textures and hiding spots for increased challenge</p>
-                        <div class="product-meta">
-                            <span class="product-price">$39.99</span>
-                            <span class="product-size">Large</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Product 3 -->
-                <div class="product-item">
-                    <div class="product-image-wrapper">
-                        <img src="images/travel-mat.png" alt="Travel Snuffle Mat" class="product-image">
-                        <div class="product-overlay">
-                            <div class="product-quick-actions">
-                                <a href="#" class="quick-action-btn"><i class="fas fa-eye"></i></a>
-                                <a href="#" class="quick-action-btn"><i class="fas fa-shopping-bag"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-content">
-                        <div class="product-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <span>(19)</span>
-                        </div>
-                        <h3 class="product-title">Travel Snuffle Mat</h3>
-                        <p class="product-description">Compact and foldable design for on-the-go enrichment</p>
-                        <div class="product-meta">
-                            <span class="product-price">$24.99</span>
-                            <span class="product-size">Small</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Product Benefits -->
-            <div class="product-benefits reveal">
-                <div class="benefit-image">
-                    <img src="images/classic-mat.png" alt="Dog enjoying a snuffle mat" class="benefit-hero-image">
-                    <div class="benefit-accent"></div>
-                </div>
-                <div class="benefits-content">
-                    <h3>Why pets love our snuffle mats</h3>
-                    <ul class="benefits-list">
-                        <li>
-                            <div class="benefit-icon"><i class="fas fa-brain"></i></div>
-                            <div class="benefit-text">
-                                <h4>Mental Stimulation</h4>
-                                <p>Engages natural foraging instincts to reduce boredom and anxiety</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="benefit-icon"><i class="fas fa-paw"></i></div>
-                            <div class="benefit-text">
-                                <h4>Pet-Safe Materials</h4>
-                                <p>Crafted with non-toxic, premium fabrics safe for all pets</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="benefit-icon"><i class="fas fa-heart"></i></div>
-                            <div class="benefit-text">
-                                <h4>Handcrafted Quality</h4>
-                                <p>Each mat is meticulously made with attention to every detail</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="benefit-icon"><i class="fas fa-tint"></i></div>
-                            <div class="benefit-text">
-                                <h4>Easy Maintenance</h4>
-                                <p>Machine washable design for years of enjoyable use</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- About Us Section -->
-    <section id="about" class="about">
-        <div class="about-decoration about-decoration-1"></div>
-        <div class="about-decoration about-decoration-2"></div>
+
+
+
+
+
+
+
+    <!-- Comparison Section -->
+    <section id="comparison" class="comparison">
+        <div class="comparison-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+        </div>
         <div class="container">
             <div class="section-header reveal">
-                <span class="section-tag"><i class="fas fa-book-open"></i>Our Story</span>
-                <h2>About Furever Yours</h2>
-                <p>Founded with love in 2025</p>
+                <span class="section-tag"><i class="fas fa-heart"></i>Why Choose Us</span>
+                <h2>What Makes Us <span class="highlight">Different</span></h2>
+                <p>Compare and see the Furever Yours advantage</p>
             </div>
             
-            <div class="bento-grid reveal">
-                <!-- Founder Image - Large Tile -->
-                <div class="bento-tile bento-tile-large founder-tile">
-                    <img src="images/founder.png" alt="Reena Chitragar - Founder">
-                    <div class="tile-overlay">
-                        <h3>Reena Chitragar</h3>
-                        <p>Founder & Designer</p>
+            <div class="comparison-content reveal">
+                <!-- Image Showcase -->
+                <div class="comparison-showcase">
+                    <div class="showcase-header">
+                        <h3>Our Premium Quality</h3>
+                        <p>Handcrafted with attention to every detail</p>
+                    </div>
+                    <div class="slider-container">
+                        <div class="slider-track" id="sliderTrack">
+                            <div class="slide active">
+                                <img src="images/slider/main.png" alt="Furever Yours Premium Mat">
+                                <div class="slide-overlay">
+                                    <span class="slide-label">Premium Design</span>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/slider/2.jpg" alt="Material Quality">
+                                <div class="slide-overlay">
+                                    <span class="slide-label">Material Quality</span>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/slider/3.jpg" alt="Multi-Sensory Design">
+                                <div class="slide-overlay">
+                                    <span class="slide-label">Multi-Sensory</span>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/slider/4.jpg" alt="Durable Construction">
+                                <div class="slide-overlay">
+                                    <span class="slide-label">Durable Build</span>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/slider/5.jpg" alt="Pet-Friendly Colors">
+                                <div class="slide-overlay">
+                                    <span class="slide-label">Pet-Friendly Colors</span>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/slider/6.jpg" alt="Oxford Cotton Base">
+                                <div class="slide-overlay">
+                                    <span class="slide-label">Oxford Cotton Base</span>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <img src="images/slider/7.jpg" alt="Webbed Loops Design">
+                                <div class="slide-overlay">
+                                    <span class="slide-label">Webbed Loops</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-nav">
+                            <button class="slider-btn prev-btn" onclick="changeSlide(-1)">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="slider-btn next-btn" onclick="changeSlide(1)">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="slider-dots">
+                        <span class="dot active" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                        <span class="dot" onclick="currentSlide(5)"></span>
+                        <span class="dot" onclick="currentSlide(6)"></span>
+                        <span class="dot" onclick="currentSlide(7)"></span>
                     </div>
                 </div>
                 
-                <!-- Mission Statement - Medium Tile -->
-                <div class="bento-tile bento-tile-medium mission-tile">
-                    <div class="tile-icon">
-                        <i class="fas fa-heart"></i>
+                <!-- Comparison Table -->
+                <div class="comparison-table">
+                    <div class="table-header">
+                        <h3>Feature Comparison</h3>
+                        <p>See how we stack up against the competition</p>
                     </div>
-                    <h3>Our Mission</h3>
-                    <p>Improve the well-being of pets everywhere by providing premium enrichment products that engage their natural instincts and strengthen the bond between pets and their owners.</p>
-                </div>
-                
-                <!-- Origin Story - Medium Tile -->
-                <div class="bento-tile bento-tile-medium origin-tile">
-                    <div class="tile-icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h3>How It Started</h3>
-                    <p>After noticing how her own dog benefited from foraging activities, Reena set out to create high-quality snuffle mats that would provide mental stimulation while being durable and safe.</p>
-                </div>
-                
-                <!-- Happy Customers - Small Tile -->
-                <div class="bento-tile bento-tile-small customers-tile">
-                    <div class="tile-icon">
-                        <i class="fas fa-smile"></i>
-                    </div>
-                    <h3>Happy Customers</h3>
-                </div>
-                
-                <!-- Values - Small Tile (replacing Products tile) -->
-                <div class="bento-tile bento-tile-small values-tile">
-                    <div class="tile-icon">
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h3>Our Values</h3>
-                    <div class="value-keywords">
-                        <span>Quality</span>
-                        <span>Innovation</span>
-                        <span>Community</span>
-                    </div>
-                </div>
-                
-                <!-- Quote - Medium Tile (replacing Values tile) -->
-                <div class="bento-tile bento-tile-medium quote-tile">
-                    <div class="quote-mark"><i class="fas fa-quote-left"></i></div>
-                    <p>Every pet deserves enrichment that's safe, durable, and fun!</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section id="how-it-works" class="how-it-works">
-        <div class="container">
-            <div class="section-header reveal">
-                <span class="section-tag"><i class="fas fa-puzzle-piece"></i>Simple Process</span>
-                <h2>How Snuffle Mats Work</h2>
-                <p>Designed to engage your pet's natural foraging instincts</p>
-            </div>
-            <div class="steps reveal">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-icon">
-                        <i class="fas fa-cookie"></i>
-                    </div>
-                    <h3>Scatter Treats</h3>
-                    <p>Hide treats or kibble throughout the fabric strips of the mat</p>
-                </div>
-                <div class="step-connector"></div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-icon">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <h3>Encourage Foraging</h3>
-                    <p>Let your pet use their nose to find the hidden treats</p>
-                </div>
-                <div class="step-connector"></div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>Mental Stimulation</h3>
-                    <p>Watch as they engage and exercise their mind</p>
-                </div>
-                <div class="step-connector"></div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <div class="step-icon">
-                        <i class="fas fa-hands-helping"></i>
-                    </div>
-                    <h3>Bond & Enjoy</h3>
-                    <p>Create positive experiences and strengthen your connection</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq" class="faq">
-        <div class="faq-decoration faq-decoration-1"></div>
-        <div class="faq-decoration faq-decoration-2"></div>
-        <div class="faq-pattern"></div>
-        <div class="container">
-            <div class="section-header reveal">
-                <span class="section-tag"><i class="fas fa-question-circle"></i>Common Questions</span>
-                <h2>Frequently Asked Questions</h2>
-                <p>Everything you need to know about our snuffle mats</p>
-            </div>
-            
-            <div class="faq-container reveal">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Are snuffle mats safe for all pets?</h3>
-                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            <p>Yes, our snuffle mats are designed to be safe for all pets, including dogs and cats. However, we recommend supervising your pet during use, especially if they tend to chew fabric.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>How do I clean my snuffle mat?</h3>
-                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            <p>All our snuffle mats are machine washable. Simply shake out any debris, place in a washing machine on a gentle cycle with mild detergent, and allow to air dry completely before the next use.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>What treats work best with snuffle mats?</h3>
-                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            <p>Small, dry treats work best with snuffle mats. You can use your pet's regular kibble, small training treats, or even pieces of freeze-dried meat. Avoid using wet or sticky treats as they can be difficult to clean.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>How long do snuffle mats typically last?</h3>
-                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            <p>With proper care, our premium snuffle mats can last for years. Each mat is handcrafted with durable materials specifically chosen for longevity. Regular cleaning and proper storage will extend the life of your mat.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Can I customize my snuffle mat?</h3>
-                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            <p>Yes! We offer customization options for color, size, and complexity level. Please contact our customer support team to discuss your specific requirements for a personalized snuffle mat.</p>
-                        </div>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="feature-column">Features</th>
+                                    <th class="furever-column">
+                                        <div class="company-header">
+                                            <img src="images/logo-heart.png" alt="Furever Yours" class="company-logo">
+                                            <span>Furever Yours</span>
+                                        </div>
+                                    </th>
+                                    <th class="competitor-column">Other Brands</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="feature-cell">
+                                        <div class="feature-content">
+                                            <i class="fas fa-leaf"></i>
+                                            <span>Material Quality</span>
+                                        </div>
+                                    </td>
+                                    <td class="furever-cell">
+                                        <div class="cell-content">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Mixed Eco-friendly fabrics - Oxford cotton, wool felt</span>
+                                        </div>
+                                    </td>
+                                    <td class="competitor-cell">
+                                        <div class="cell-content">
+                                            <i class="fas fa-times-circle"></i>
+                                            <span>Polyester based fabrics</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="feature-cell">
+                                        <div class="feature-content">
+                                            <i class="fas fa-brain"></i>
+                                            <span>Sensory Experience</span>
+                                        </div>
+                                    </td>
+                                    <td class="furever-cell">
+                                        <div class="cell-content">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Multi-sensory materials</span>
+                                        </div>
+                                    </td>
+                                    <td class="competitor-cell">
+                                        <div class="cell-content">
+                                            <i class="fas fa-times-circle"></i>
+                                            <span>Single type of material</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="feature-cell">
+                                        <div class="feature-content">
+                                            <i class="fas fa-palette"></i>
+                                            <span>Color Design</span>
+                                        </div>
+                                    </td>
+                                    <td class="furever-cell">
+                                        <div class="cell-content">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Pet-friendly visually aligned colour combinations</span>
+                                        </div>
+                                    </td>
+                                    <td class="competitor-cell">
+                                        <div class="cell-content">
+                                            <i class="fas fa-times-circle"></i>
+                                            <span>Mixed colour combinations</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="feature-cell">
+                                        <div class="feature-content">
+                                            <i class="fas fa-layer-group"></i>
+                                            <span>Challenge Levels</span>
+                                        </div>
+                                    </td>
+                                    <td class="furever-cell">
+                                        <div class="cell-content">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Multi-level challenges (puppies to adult)</span>
+                                        </div>
+                                    </td>
+                                    <td class="competitor-cell">
+                                        <div class="cell-content">
+                                            <i class="fas fa-times-circle"></i>
+                                            <span>Either too easy or too difficult</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="feature-cell">
+                                        <div class="feature-content">
+                                            <i class="fas fa-shield-alt"></i>
+                                            <span>Safety & Durability</span>
+                                        </div>
+                                    </td>
+                                    <td class="furever-cell">
+                                        <div class="cell-content">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Non-toxic, premium materials with anti-slip base</span>
+                                        </div>
+                                    </td>
+                                    <td class="competitor-cell">
+                                        <div class="cell-content">
+                                            <i class="fas fa-exclamation-triangle"></i>
+                                            <span>Standard materials, may lack safety features</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -547,38 +409,12 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
+                    <img src="images/logo-heart.png" alt="Furever Yours Heart Logo" style="margin-right: 15px;">
                     <img src="images/logo-white.png" alt="Furever Yours Logo">
                     <p>Inspiring pet enrichment through thoughtful design</p>
                 </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h3>Quick Links</h3>
-                        <ul>
-                            <li><a href="#products">Shop</a></li>
-                            <li><a href="#about">About Us</a></li>
-                            <li><a href="#how-it-works">How It Works</a></li>
-                            <li><a href="#faq">FAQs</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h3>Support</h3>
-                        <ul>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Shipping & Returns</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h3>Connect</h3>
-                        <div class="social-icons">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                        </div>
-                        <div class="contact-info">
-                            <p><i class="fas fa-envelope"></i> support@fureveryours.co.uk</p>
-                        </div>
-                    </div>
+                <div class="footer-contact">
+                    <p><i class="fas fa-envelope"></i> support@fureveryours.co.uk</p>
                 </div>
             </div>
             <div class="footer-bottom">

@@ -208,7 +208,7 @@
                 <div class="comparison-showcase">
                     <div class="showcase-header">
                         <h3>Our Premium Quality</h3>
-                        <p>Handcrafted with attention to every detail</p>
+                        <p>Snuffle Mat Images</p>
                     </div>
                     <div class="slider-container">
                         <div class="slider-track" id="sliderTrack">

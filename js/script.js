@@ -345,7 +345,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', resizeVideos);
     
     // Comparison Slider Functionality
-    let currentSlide = 0;
+    window.currentSlide = 0;
     const slides = document.querySelectorAll('.slide');
     const dots = document.querySelectorAll('.dot');
     const sliderTrack = document.getElementById('sliderTrack');
@@ -369,12 +369,12 @@ document.addEventListener('DOMContentLoaded', function() {
             const translateX = -index * 100;
             sliderTrack.style.transform = `translateX(${translateX}%)`;
             
-            currentSlide = index;
+            window.currentSlide = index;
         }
         
         // Auto-play slider
         function autoSlide() {
-            const nextSlide = (currentSlide + 1) % slides.length;
+            const nextSlide = (window.currentSlide + 1) % slides.length;
             showSlide(nextSlide);
         }
         
@@ -415,11 +415,11 @@ document.addEventListener('DOMContentLoaded', function() {
             if (Math.abs(diff) > threshold) {
                 if (diff > 0) {
                     // Swipe left - next slide
-                    const nextSlide = (currentSlide + 1) % slides.length;
+                    const nextSlide = (window.currentSlide + 1) % slides.length;
                     showSlide(nextSlide);
                 } else {
                     // Swipe right - previous slide
-                    const prevSlide = (currentSlide - 1 + slides.length) % slides.length;
+                    const prevSlide = (window.currentSlide - 1 + slides.length) % slides.length;
                     showSlide(prevSlide);
                 }
             }

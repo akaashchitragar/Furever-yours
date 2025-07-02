@@ -108,16 +108,6 @@
                         <img src="images/logo-white.png" alt="Furever Yours Logo">
                     </a>
                 </div>
-                <div class="nav-links">
-                    <ul>
-                    </ul>
-                </div>
-
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
             </div>
         </nav>
     </header>
@@ -136,6 +126,16 @@
                     <h1 class="hero-title">Happy Pets, <span class="highlight">Happy Parents</span></h1>
                     <h2 class="hero-subtitle">High-Quality Snuffle Mats For Your Furry Friends</h2>
                     <p class="hero-description">Give your pet the mental stimulation they deserve with our premium snuffle mats. Made with love to reduce boredom and anxiety while strengthening your bond.</p>
+                    
+                    <!-- Mobile Hero Image - Only visible on mobile -->
+                    <div class="hero-image-container-mobile fade-in delay-2">
+                        <div class="hero-image-main">
+                            <img src="images/hero-dog.png" alt="Happy Dog with Snuffle Mat" class="hero-dog">
+                        </div>
+                        <div class="floating-paw">
+                            <i class="fas fa-paw"></i>
+                        </div>
+                    </div>
                     
                     <div class="hero-features">
                         <div class="hero-feature">
@@ -161,6 +161,7 @@
 
                 </div>
                 
+                <!-- Desktop Hero Image - Only visible on desktop -->
                 <div class="hero-image-container fade-in delay-2">
                     <div class="hero-image-main">
                         <img src="images/hero-dog.png" alt="Happy Dog with Snuffle Mat" class="hero-dog">
@@ -190,215 +191,251 @@
 
 
 
-    <!-- Comparison Section -->
-    <section id="comparison" class="comparison">
+    <!-- Enhanced Comparison Section -->
+    <section id="comparison" class="comparison-enhanced">
         <div class="comparison-bg-shapes">
             <div class="shape shape-1"></div>
             <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
         </div>
         <div class="container">
-            <div class="section-header reveal">
-                <span class="section-tag"><i class="fas fa-heart"></i>Why Choose Us</span>
-                <h2>What Makes Us <span class="highlight">Different</span></h2>
-                <p>Compare and see the Furever Yours advantage</p>
+            <div class="section-header-enhanced reveal">
+                <span class="section-tag-enhanced"><i class="fas fa-heart"></i>Why Choose Us</span>
+                <h2 class="comparison-title">What Makes Us <span class="highlight-enhanced">Different</span></h2>
+                <p class="comparison-description">Compare and see the Furever Yours advantage</p>
             </div>
             
-            <div class="comparison-content reveal">
-                <!-- Image Showcase -->
-                <div class="comparison-showcase">
-                    <div class="showcase-header">
-                        <h3>Our Premium Quality</h3>
-                        <p>Snuffle Mat Images</p>
-                    </div>
-                    <div class="slider-container">
-                        <div class="slider-track" id="sliderTrack">
-                            <div class="slide active">
-                                <img src="images/slider/main.png" alt="Furever Yours Premium Mat">
-                                <div class="slide-overlay">
-                                    <span class="slide-label">Premium Design</span>
-                                </div>
-                            </div>
-                            <div class="slide">
-                                <img src="images/slider/2.jpg" alt="Material Quality">
-                                <div class="slide-overlay">
-                                    <span class="slide-label">Material Quality</span>
-                                </div>
-                            </div>
-                            <div class="slide">
-                                <img src="images/slider/3.jpg" alt="Multi-Sensory Design">
-                                <div class="slide-overlay">
-                                    <span class="slide-label">Multi-Sensory</span>
-                                </div>
-                            </div>
-                            <div class="slide">
-                                <img src="images/slider/4.jpg" alt="Durable Construction">
-                                <div class="slide-overlay">
-                                    <span class="slide-label">Durable Build</span>
-                                </div>
-                            </div>
-                            <div class="slide">
-                                <img src="images/slider/5.jpg" alt="Pet-Friendly Colors">
-                                <div class="slide-overlay">
-                                    <span class="slide-label">Pet-Friendly Colors</span>
-                                </div>
-                            </div>
-                            <div class="slide">
-                                <img src="images/slider/6.jpg" alt="Oxford Cotton Base">
-                                <div class="slide-overlay">
-                                    <span class="slide-label">Oxford Cotton Base</span>
-                                </div>
-                            </div>
-                            <div class="slide">
-                                <img src="images/slider/7.jpg" alt="Webbed Loops Design">
-                                <div class="slide-overlay">
-                                    <span class="slide-label">Webbed Loops</span>
-                                </div>
+            <!-- Enhanced Full Width Comparison Table -->
+            <div class="comparison-table-enhanced reveal">
+                <div class="table-wrapper-enhanced">
+                    <table class="enhanced-table">
+                        <thead>
+                            <tr>
+                                <th class="feature-column-enhanced">
+                                    <div class="feature-header">
+                                        <i class="fas fa-star"></i>
+                                        <span>Features</span>
+                                    </div>
+                                </th>
+                                <th class="furever-column-enhanced">
+                                    <div class="company-header-enhanced">
+                                        <img src="images/logo-heart.png" alt="FurEver Yours" class="company-logo-enhanced">
+                                        <span>FurEver Yours</span>
+                                    </div>
+                                </th>
+                                <th class="competitor-column-enhanced">
+                                    <div class="competitor-header">
+                                        <i class="fas fa-building"></i>
+                                        <span>Other Brands</span>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="feature-cell-enhanced">
+                                    <div class="feature-content-enhanced">
+                                        <div class="feature-icon-wrapper-enhanced">
+                                            <i class="fas fa-leaf"></i>
+                                        </div>
+                                        <span>Material Quality</span>
+                                    </div>
+                                </td>
+                                <td class="furever-cell-enhanced">
+                                    <div class="cell-content-enhanced">
+                                        <div class="check-icon-wrapper">
+                                            <i class="fas fa-check-circle"></i>
+                                        </div>
+                                        <span>Mixed Eco-friendly fabrics - Oxford cotton, wool felt</span>
+                                    </div>
+                                </td>
+                                <td class="competitor-cell-enhanced">
+                                    <div class="cell-content-enhanced">
+                                        <div class="cross-icon-wrapper">
+                                            <i class="fas fa-times-circle"></i>
+                                        </div>
+                                        <span>Polyester based fabrics</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="feature-cell-enhanced">
+                                    <div class="feature-content-enhanced">
+                                        <div class="feature-icon-wrapper-enhanced">
+                                            <i class="fas fa-brain"></i>
+                                        </div>
+                                        <span>Sensory Experience</span>
+                                    </div>
+                                </td>
+                                <td class="furever-cell-enhanced">
+                                    <div class="cell-content-enhanced">
+                                        <div class="check-icon-wrapper">
+                                            <i class="fas fa-check-circle"></i>
+                                        </div>
+                                        <span>Multi-sensory materials</span>
+                                    </div>
+                                </td>
+                                <td class="competitor-cell-enhanced">
+                                    <div class="cell-content-enhanced">
+                                        <div class="cross-icon-wrapper">
+                                            <i class="fas fa-times-circle"></i>
+                                        </div>
+                                        <span>Single type of material</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="feature-cell-enhanced">
+                                    <div class="feature-content-enhanced">
+                                        <div class="feature-icon-wrapper-enhanced">
+                                            <i class="fas fa-palette"></i>
+                                        </div>
+                                        <span>Color Design</span>
+                                    </div>
+                                </td>
+                                <td class="furever-cell-enhanced">
+                                    <div class="cell-content-enhanced">
+                                        <div class="check-icon-wrapper">
+                                            <i class="fas fa-check-circle"></i>
+                                        </div>
+                                        <span>Pet-friendly visually aligned colour combinations</span>
+                                    </div>
+                                </td>
+                                <td class="competitor-cell-enhanced">
+                                    <div class="cell-content-enhanced">
+                                        <div class="cross-icon-wrapper">
+                                            <i class="fas fa-times-circle"></i>
+                                        </div>
+                                        <span>Mixed colour combinations</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="feature-cell-enhanced">
+                                    <div class="feature-content-enhanced">
+                                        <div class="feature-icon-wrapper-enhanced">
+                                            <i class="fas fa-layer-group"></i>
+                                        </div>
+                                        <span>Challenge Levels</span>
+                                    </div>
+                                </td>
+                                <td class="furever-cell-enhanced">
+                                    <div class="cell-content-enhanced">
+                                        <div class="check-icon-wrapper">
+                                            <i class="fas fa-check-circle"></i>
+                                        </div>
+                                        <span>Multi-level challenges (puppies to adult)</span>
+                                    </div>
+                                </td>
+                                <td class="competitor-cell-enhanced">
+                                    <div class="cell-content-enhanced">
+                                        <div class="cross-icon-wrapper">
+                                            <i class="fas fa-times-circle"></i>
+                                        </div>
+                                        <span>Either too easy or too difficult</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="feature-cell-enhanced">
+                                    <div class="feature-content-enhanced">
+                                        <div class="feature-icon-wrapper-enhanced">
+                                            <i class="fas fa-shield-alt"></i>
+                                        </div>
+                                        <span>Safety & Durability</span>
+                                    </div>
+                                </td>
+                                <td class="furever-cell-enhanced">
+                                    <div class="cell-content-enhanced">
+                                        <div class="check-icon-wrapper">
+                                            <i class="fas fa-check-circle"></i>
+                                        </div>
+                                        <span>Non-toxic, premium materials with anti-slip base</span>
+                                    </div>
+                                </td>
+                                <td class="competitor-cell-enhanced">
+                                    <div class="cell-content-enhanced">
+                                        <div class="warning-icon-wrapper">
+                                            <i class="fas fa-exclamation-triangle"></i>
+                                        </div>
+                                        <span>Standard materials, may lack safety features</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Enhanced Image Showcase Below Table -->
+            <div class="comparison-showcase-enhanced reveal">
+                <div class="showcase-header-enhanced">
+                    <span class="showcase-tag"><i class="fas fa-camera"></i>Premium Gallery</span>
+                    <h3>Our Premium Quality</h3>
+                    <p>Experience the difference through our detailed product showcase</p>
+                </div>
+                <div class="slider-container-enhanced">
+                    <div class="slider-track" id="sliderTrack">
+                        <div class="slide active">
+                            <img src="images/slider/main.png" alt="Furever Yours Premium Mat">
+                            <div class="slide-overlay">
+                                <span class="slide-label">Premium Design</span>
                             </div>
                         </div>
-                        <div class="slider-nav">
-                            <button class="slider-btn prev-btn" onclick="changeSlide(-1)">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <button class="slider-btn next-btn" onclick="changeSlide(1)">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
+                        <div class="slide">
+                            <img src="images/slider/2.jpg" alt="Material Quality">
+                            <div class="slide-overlay">
+                                <span class="slide-label">Material Quality</span>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <img src="images/slider/3.jpg" alt="Multi-Sensory Design">
+                            <div class="slide-overlay">
+                                <span class="slide-label">Multi-Sensory</span>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <img src="images/slider/4.jpg" alt="Durable Construction">
+                            <div class="slide-overlay">
+                                <span class="slide-label">Durable Build</span>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <img src="images/slider/5.jpg" alt="Pet-Friendly Colors">
+                            <div class="slide-overlay">
+                                <span class="slide-label">Pet-Friendly Colors</span>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <img src="images/slider/6.jpg" alt="Oxford Cotton Base">
+                            <div class="slide-overlay">
+                                <span class="slide-label">Oxford Cotton Base</span>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <img src="images/slider/7.jpg" alt="Webbed Loops Design">
+                            <div class="slide-overlay">
+                                <span class="slide-label">Webbed Loops</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="slider-dots">
-                        <span class="dot active" onclick="currentSlide(1)"></span>
-                        <span class="dot" onclick="currentSlide(2)"></span>
-                        <span class="dot" onclick="currentSlide(3)"></span>
-                        <span class="dot" onclick="currentSlide(4)"></span>
-                        <span class="dot" onclick="currentSlide(5)"></span>
-                        <span class="dot" onclick="currentSlide(6)"></span>
-                        <span class="dot" onclick="currentSlide(7)"></span>
+                    <div class="slider-nav">
+                        <button class="slider-btn prev-btn" onclick="changeSlide(-1)">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="slider-btn next-btn" onclick="changeSlide(1)">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
                     </div>
                 </div>
-                
-                <!-- Comparison Table -->
-                <div class="comparison-table">
-                    <div class="table-header">
-                        <h3>Feature Comparison</h3>
-                        <p>See how we stack up against the competition</p>
-                    </div>
-                    <div class="table-wrapper">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th class="feature-column">Features</th>
-                                    <th class="furever-column">
-                                        <div class="company-header">
-                                            <img src="images/logo-heart.png" alt="Furever Yours" class="company-logo">
-                                            <span>Furever Yours</span>
-                                        </div>
-                                    </th>
-                                    <th class="competitor-column">Other Brands</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="feature-cell">
-                                        <div class="feature-content">
-                                            <i class="fas fa-leaf"></i>
-                                            <span>Material Quality</span>
-                                        </div>
-                                    </td>
-                                    <td class="furever-cell">
-                                        <div class="cell-content">
-                                            <i class="fas fa-check-circle"></i>
-                                            <span>Mixed Eco-friendly fabrics - Oxford cotton, wool felt</span>
-                                        </div>
-                                    </td>
-                                    <td class="competitor-cell">
-                                        <div class="cell-content">
-                                            <i class="fas fa-times-circle"></i>
-                                            <span>Polyester based fabrics</span>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="feature-cell">
-                                        <div class="feature-content">
-                                            <i class="fas fa-brain"></i>
-                                            <span>Sensory Experience</span>
-                                        </div>
-                                    </td>
-                                    <td class="furever-cell">
-                                        <div class="cell-content">
-                                            <i class="fas fa-check-circle"></i>
-                                            <span>Multi-sensory materials</span>
-                                        </div>
-                                    </td>
-                                    <td class="competitor-cell">
-                                        <div class="cell-content">
-                                            <i class="fas fa-times-circle"></i>
-                                            <span>Single type of material</span>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="feature-cell">
-                                        <div class="feature-content">
-                                            <i class="fas fa-palette"></i>
-                                            <span>Color Design</span>
-                                        </div>
-                                    </td>
-                                    <td class="furever-cell">
-                                        <div class="cell-content">
-                                            <i class="fas fa-check-circle"></i>
-                                            <span>Pet-friendly visually aligned colour combinations</span>
-                                        </div>
-                                    </td>
-                                    <td class="competitor-cell">
-                                        <div class="cell-content">
-                                            <i class="fas fa-times-circle"></i>
-                                            <span>Mixed colour combinations</span>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="feature-cell">
-                                        <div class="feature-content">
-                                            <i class="fas fa-layer-group"></i>
-                                            <span>Challenge Levels</span>
-                                        </div>
-                                    </td>
-                                    <td class="furever-cell">
-                                        <div class="cell-content">
-                                            <i class="fas fa-check-circle"></i>
-                                            <span>Multi-level challenges (puppies to adult)</span>
-                                        </div>
-                                    </td>
-                                    <td class="competitor-cell">
-                                        <div class="cell-content">
-                                            <i class="fas fa-times-circle"></i>
-                                            <span>Either too easy or too difficult</span>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="feature-cell">
-                                        <div class="feature-content">
-                                            <i class="fas fa-shield-alt"></i>
-                                            <span>Safety & Durability</span>
-                                        </div>
-                                    </td>
-                                    <td class="furever-cell">
-                                        <div class="cell-content">
-                                            <i class="fas fa-check-circle"></i>
-                                            <span>Non-toxic, premium materials with anti-slip base</span>
-                                        </div>
-                                    </td>
-                                    <td class="competitor-cell">
-                                        <div class="cell-content">
-                                            <i class="fas fa-exclamation-triangle"></i>
-                                            <span>Standard materials, may lack safety features</span>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                <div class="slider-dots">
+                    <span class="dot active" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                    <span class="dot" onclick="currentSlide(7)"></span>
                 </div>
             </div>
         </div>

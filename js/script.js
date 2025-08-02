@@ -224,26 +224,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Back to top button
-    const backToTopButton = document.querySelector('.back-to-top');
-    
-    if (backToTopButton) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTopButton.classList.add('visible');
-            } else {
-                backToTopButton.classList.remove('visible');
-            }
-        });
-        
-        backToTopButton.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    }
+
 
     // Cookie consent banner
     const cookieBanner = document.querySelector('.cookie-banner');
